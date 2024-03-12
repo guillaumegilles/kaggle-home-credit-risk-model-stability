@@ -1,0 +1,16 @@
+---
+title: "Exploratory Data Analysis"
+format: html
+---
+
+
+```{python}
+import polars as pl
+import numpy as np
+import pandas as pd
+import lightgbm as lgb
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import roc_auc_score 
+
+dataPath = "/kaggle/input/home-credit-credit-risk-model-stability/"
+```
