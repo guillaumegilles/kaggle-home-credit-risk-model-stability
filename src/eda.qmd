@@ -45,8 +45,8 @@ train_static_0_1
 
 ```{R}
 train_base <- read.csv("/kaggle/input/home-credit-credit-risk-model-stability/csv_files/train/train_base.csv")
-train_static_0_1 <- read.csv("/kaggle/input/home-credit-credit-risk-model-stability/csv_files/train/train_static_0_1.csv")
 train_static_0_0 <- read.csv("/kaggle/input/home-credit-credit-risk-model-stability/csv_files/train/train_static_0_0.csv")
+train_static_0_1 <- read.csv("/kaggle/input/home-credit-credit-risk-model-stability/csv_files/train/train_static_0_1.csv")
 train_static_cb_O <- read.csv("/kaggle/input/home-credit-credit-risk-model-stability/csv_files/train/train_static_cb_0.csv")
 
 # creating a training dataset with a depth value of 0
@@ -61,14 +61,13 @@ train_set_0
 train_set_0 %>%
   select(-c(date_decision, MONTH, WEEK_NUM)) %>%
   mutate_if(is.character, as.factor) %>%
-  as.factor(select(target)) %>%
   glimpse()
 
 ####
 
 test_base <- read.csv("/kaggle/input/home-credit-credit-risk-model-stability/csv_files/test/test_base.csv")
-test_static_0_1 <- read.csv("/kaggle/input/home-credit-credit-risk-model-stability/csv_files/test/test_static_0_1.csv")
 test_static_0_0 <- read.csv("/kaggle/input/home-credit-credit-risk-model-stability/csv_files/test/test_static_0_0.csv")
+test_static_0_1 <- read.csv("/kaggle/input/home-credit-credit-risk-model-stability/csv_files/test/test_static_0_1.csv")
 test_static_cb_O <- read.csv("/kaggle/input/home-credit-credit-risk-model-stability/csv_files/test/test_static_cb_0.csv")
 
 # creating a testing dataset with a depth value of 0
@@ -83,8 +82,6 @@ test_set_0
 ### tidymodels
 
 train_split <- initial_split(train_set_0)
-train_split
-
 train_split %>%
   training() %>%
   glimpse()
