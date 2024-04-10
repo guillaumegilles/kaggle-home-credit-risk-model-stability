@@ -33,6 +33,7 @@ $$stability metric=mean(gini)+88.0⋅min(0,a)−0.5⋅std(residuals)$$
 
 ### Table Description
 
+Data can be found on the [kaggle competition](https://www.kaggle.com/competitions/home-credit-credit-risk-model-stability/data).
 This dataset contains a large number of tables as a result of utilizing diverse
 data sources and the varying levels of data aggregation used while preparing
 the dataset.
