@@ -206,7 +206,7 @@ maximum size of the tables.
 - depth=0 - These are static features directly tied to a specific `case_id`.
 - depth=1 - Each `case_id` has an associated historical record, indexed by
 `num_group1`.
-depth=2 - Each `case_id` has an associated historical record, indexed by
+- depth=2 - Each `case_id` has an associated historical record, indexed by
 both `num_group1` and `num_group2`.
 
 
