@@ -231,14 +231,15 @@ important and will be clarified in feature definitions.
 All other raw columns in the tables serve as predictors. Their definitions can
 be found in the file feature_definitions.csv. For depth=0 tables, predictors can be directly used as features. However, for tables with depth>0, you may need to employ aggregation functions that will condense the historical records associated with each case_id into a single feature. In case num_group1 or num_group2 stands for person index (this is clear with predictor definitions) the zero index has special meaning. When num_groupN=0 it is the applicant (the person who applied for a loan).
 
-Various predictors were transformed, therefore we have the following notation for similar groups of transformations
+Various predictors were transformed, therefore we have the following notation for similar groups of transformations:
 
-P - Transform DPD (Days past due)
-M - Masking categories
-A - Transform amount
-D - Transform date
-T - Unspecified Transform
-L - Unspecified Transform
+- **P**: Transform DPD (Days past due)
+- **M**: Masking categories
+- **A**: Transform amount
+- **D**: Transform date
+- **T**: Unspecified Transform
+- **L**: Unspecified Transform
+
 Please note that transformations within a group are denoted by a capital letter at the end of the predictor name (e.g., maxdbddpdtollast6m_4187119P). We hope that this will simplify the manipulation with predictors.
 
 Edits:
